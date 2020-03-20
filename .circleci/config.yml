@@ -11,9 +11,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Test
-          command: |
-            python test_001.py
+          name: Pytest
+          commmand: |
+            pip install pytest
+            pytest -s test_001.py
 
 workflows:
   version: 2
