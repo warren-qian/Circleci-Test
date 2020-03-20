@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Pytest
-          commmand: |
+          command: |
             pip install pytest
             pytest -s test_001.py
 
