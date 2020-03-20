@@ -1,0 +1,23 @@
+version: 2.1
+
+executors:
+  python:
+    docker:
+      - image: python:3.7
+
+jobs:
+  linting:
+    executor: python
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: |
+            python test_001.py
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - linting:
+          name: Just a Test!!!
